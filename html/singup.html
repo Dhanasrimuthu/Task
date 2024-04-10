@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/singup.css">
+</head>
+<body>
+    <div id="maindiv">
+        <form >
+         <h2>SINGUP</h2>
+            <div id="subdiv1" class="subdiv"><input id="username" type="email" name="username"  placeholder="Enter Username.." required></div>
+             <div id="subdiv2" class="subdiv"><input id="password" type="password" name="password" placeholder="Enter password.."required></div>
+             <div id="subdiv3" class="subdiv">Gender: <input type="radio" class="gender" value="male" name="Gender"> Male 
+             <input type="radio" class="gender"  value="female" name="Gender"> Female</div>
+             <div id="subdiv4" class="subdiv"><input type="text" id="state" name="state"  placeholder="Enter user state.."required></div>
+             <div id="subdiv5" class="subdiv"><select id="country"  name="country" required>
+                 <option> Select Country </option>
+                 <option value="india">India</option>
+                 <option value="usa">USA</option>
+             </select></div>
+             <div id="subdiv6" class="subdiv"><button type="button" onclick="localStore()">Singup</button></div>
+        </form>
+        </div>
+     <script>
+      function localStore(){
+      var username=document.getElementById("username").value;
+      var password=document.getElementById("password").value;
+      if(!username || !password){
+       return alert("invaild");
+       }
+     else{
+         localStorage.setItem("username1",username);
+         localStorage.setItem("password1",password);
+         window.location.href="../html/login.html";
+      }
+     }
+     </script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+     background-color: rgb(241,241,241);
+}
+#header{
+    border-radius: 5px;
+    line-height: 50px;
+    text-align: center;
+    position: sticky;
+    top: 0px;
+    background-color:rgb(237,243,248);
+}
+#logout{
+    padding:7px;
+    border: 2px solid rgb(150, 209, 229);
+    border-radius: 10px;
+    margin-left: 20%;
+    background: transparent;
+    font-weight: bold;
+}
+#search{
+    border: none;
+    border-radius: 20px; 
+    padding: 10px;
+    width: 40%;
+}
+#search:hover{
+    box-shadow: 1px 1px 5px 3px lightblue;
+}
+#footer{
+    width: 100%;
+    /* border: 1px solid black; */
+    line-height: 50px;
+    text-align: center;
+    position: fixed;
+    bottom: 0px;
+    background-color:rgb(237,243,248);
+}
+#jobcount{
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 5px;
+    border-radius: 10px;
+    font-family: serif;
+    box-shadow: 2px 2px 2px 2px rgb(19, 136, 208);
+}
+#mainchild{
+    background-color: rgb(241,241,241);
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 50px;
+}
+#mainchild > *{
+    background-color:white;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    padding: 0px;
+    margin: 0px;
+    border-radius: 10px;
+}
+img{
+    border: none;
+    height: 50px;
+    width: 50px;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px 3px rgb(82, 77, 101);
+}
+/* span{
+    margin-left: 15px;
+} */
+#pageno{
+    margin: 20px;
+    border: 1px solid rgb(134, 203, 226);
+    border-radius: 5px;
+    padding: 5px;
+    font-weight: bold;
+}
+.item:hover{
+    background-color: aliceblue;
+    box-shadow: 1px 1px 5px 3px lightblue;
+ }
+.para1{
+     font-weight: bold;
+     font-size: large;
+}
+.para2{
+    font-family: sans-serif;
+}
+.para4{
+    font-size: small; 
+    color: #777; 
+}
+.btn{
+    padding: 1px;
+    font-size:large;
+    border: 1px solid rgb(24, 60, 82);
+    border-radius: 5px;
+    width: 2%;
+   
+}
+.btn:hover{
+    color: white;
+    background-color: rgb(33, 130, 186);
+    box-shadow: 1px 1px 5px 3px lightblue;
+}
