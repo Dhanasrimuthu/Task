@@ -6,7 +6,7 @@ pageno.textContent = 1;
 let divitem = document.querySelectorAll("#mainchild > div ");
 let count = divitem.length;
 var pagenoindex = 1;
-
+var check,select,mulvalue=2;
 // firstpage and previouspage too
 function pagefun() {
     select = Number(jobcount.value);
@@ -34,19 +34,26 @@ function pagefun() {
     }
     pageno.textContent = 1;
 }
-var check;
+
 // Next
 function selectNext() {
     // console.log(check);
+    var endindex,startindex=1;
+        if(select*mulvalue<count){
+            endindex=select*mulvalue;
+        }else {
+            endindex=count;
+        }
     if (select == 10 && check > 1) {
-        for (i = select + 1; i <= count; i++) {
+        
+        for (i = select *startindex; i <= endindex; i++) {
             document.getElementById("item" + i).style.display = "flex";
         }
         for (i = 1; i <= select; i++) {
             document.getElementById("item" + i).style.display = "none";
         }
     } else if (select == 15 && check > 1) {
-        for (i = select + 1; i <= count; i++) {
+        for (i = select * startindex; i <= endindex; i++) {
             document.getElementById("item" + i).style.display = "flex";
         }
         for (i = 1; i <= select; i++) {
@@ -60,6 +67,7 @@ function selectNext() {
         pageno.textContent = pagenoindex;
         pagenoindex = pagenoindex - 1;
     }
+    startindex=startindex+1;
 }
 
 // search
@@ -78,6 +86,7 @@ document.getElementById('search').addEventListener('input', function () {
         }
     });
     jobcount.value = 20;
+    select=20;
 });
 
 // empty the search bar
