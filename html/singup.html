@@ -9,8 +9,8 @@
 <body>
     <div id="maindiv">
         <form >
-         <h2>SINGUP</h2>
-            <div id="subdiv1" class="subdiv"><input id="username" type="email" name="username"  placeholder="Enter Username.." required></div>
+        <div> <h2>SINGUP</h2><span></span></div>
+            <div id="subdiv1" class="subdiv"><input id="username" type="email" name="username"  placeholder="Enter Username.." required ></div>
              <div id="subdiv2" class="subdiv"><input id="password" type="password" name="password" placeholder="Enter password.."required></div>
              <div id="subdiv3" class="subdiv">Gender: <input type="radio" class="gender" value="male" name="Gender"> Male 
              <input type="radio" class="gender"  value="female" name="Gender"> Female</div>
@@ -22,20 +22,30 @@
              </select></div>
              <div id="subdiv6" class="subdiv"><button type="button" onclick="localStore()">Singup</button></div>
         </form>
+       <span class="login" ><a class="login" href="./login.html" title="Direct to Login">Already have account</a></span>
         </div>
      <script>
+            // var email=document.getElementById("username").value;
+            // var checkemail=/^[^\s@]+@gmail.com+$/;
+            // if(!checkemail.test(email)){
+            //     alert("enter the vaild email");
+            // }
       function localStore(){
       var username=document.getElementById("username").value;
       var password=document.getElementById("password").value;
-      if(!username || !password){
-       return alert("invaild");
-       }
-     else{
-         localStorage.setItem("username1",username);
-         localStorage.setItem("password1",password);
+       var checkemail=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if((!checkemail.test(username)) || (!password)){
+                alert("enter the vaild email");
+            } else{
+        //  localStorage.setItem("username1",username);
+        //  localStorage.setItem("password1",password);
+        var user =JSON.parse(localStorage.getItem("user"))||[];
+        user.push({email:username,pwd:password});
+        localStorage.setItem("user",JSON.stringify(user));
          window.location.href="../html/login.html";
       }
      }
      </script>
+</body>
 </body>
 </html>

@@ -7,8 +7,10 @@
     <link rel="stylesheet" href="../css/jobsearch.css">
 </head>
 <body>
+    <nav id="navcontainer"><span class="nav"><a href="#">Home</a></span><span class="nav"><a href="#">Works</a></span><span class="nav"><a href="#">About</a></span><span class="nav"><a onclick="funLogout()" href="./login.html">Logout</a></span></nav>
     <div id="header"><input type="text" id="search"
-        placeholder="Search" onclick="empty()" ><span ><button id="logout" type="button" onclick="funLogout()">Logout</button></span>
+        placeholder="Search"  onclick="empty()" >
+        <!-- <span ><button id="logout" type="button" onclick="funLogout()">Logout</button></span> -->
 </div>
 <div id="mainchild">
     <div id="item1" class="item"><img src="../image/tcslogo.jpg" alt="not found" ><span>
@@ -102,28 +104,30 @@
         <p class="para3">Location : Chennai,Tamil Nadu,India</p>
         <p class="para4">Actively recruiting</p></span></div>
     <div id="item19" class="item"><img src="../image/tcslogo.jpg" alt="not found" ><span >
-        <p class="para1" >Java Developer(On-site)</p>
+        <p class="para1" >Java engineer(On-site)</p>
         <p class="para2"> Tata Consultancy Services</p>
         <p class="para3">Location : Bengaluru,Karnataka,India</p>
         <p class="para4">Actively recruiting</p></span></div>
     <div id="item20" class="item"><img src="../image/infosyslogo.png"alt="not found" ><span >
-        <p class="para1" >.Net Developer(On-site)</p>
+        <p class="para1" >.Net engineer (On-site)</p>
         <p class="para2">Infosys Technologies Private Limited</p>
         <p class="para3">Location : Bengaluru,Karnataka,India</p>
         <p class="para4">Actively recruiting</p></span></div>
 </div>
 <div id="footer">
-    <span id="pageno"></span>
-    <button id="btn2" class="btn" onclick="pagefun()">&laquo;</button>
+    
     <span id="span"> <select name="choose one" id="jobcount" onchange="pagefun()">
     <option value="20">All in one</option>
     <option value="10">10 job's in onepage</option>
     <option value="15">15 job's in onepage</option>
 </select></span>
-<button id="btn3" class="btn" onclick=" selectNext()">&raquo;</button>
+<!-- <button id="btnprevious" class="btn" onclick="pagefun()">&laquo;</button>
+<span id="pageno"></span>
+<button id="btnNext" class="btn" onclick=" selectNext()">&raquo;</button> -->
+<button id="btnprevious" class="btn" onclick="pageFunPrevious()">&laquo;</button>
+<span id="pageno"></span>
+<button id="btnNext" class="btn" onclick=" pagefun()">&raquo;</button>
 </div>
-
-
 
     <script src="../js/jobsearch.js"></script>
 </body>

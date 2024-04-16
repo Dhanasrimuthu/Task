@@ -6,103 +6,149 @@
     <title>Document</title>
 </head>
 <style>
-    *{
-      margin: 0px;
-      padding: 0px;
-    }
-     body{
-        height: 100vh;
-        background: linear-gradient(150deg,rgb(18,41,99),rgb(196, 25, 139),rgb(48, 154, 154)); 
-      }
-      h2{
-         text-align: center;
-          font-size: 2rem;
-          /* border: 2px solid black; */
-          border-radius: 20px;
-          padding: 5px;
-          display: inline-block;
-          margin:10px;
-          margin-left: 25%;
-          margin-right: 12%;
-          background: linear-gradient(150deg,rgb(38, 86, 86),rgb(18,41,99));
-          /* background:radial-gradient(130deg,rgb(37, 144, 74),rgb(171, 140, 25)) ; */
-      }
-      #maindiv{
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      border: 1px solid black;
-      border-radius: 70px;
-      margin: 100px;
-      margin-left: 28%;
-      margin-top: 70px;
-      padding: 30px;
-      width: 40%;
-      background-image: url("../image/singup2.avif");
-      background-repeat: no-repeat;
-      background-size: 100% 100% ;
-    }
-    #maindiv>*{
-      padding: 10px;
-    }
-    .subdiv{
-      margin: 10px;
-    }
-    .subdiv :hover{
-      transform: scale(1.1);
-      background-color:rgb(0,14,51) ;
-      color: rgb(117,124,130);
-      border: 2px solid rgb(255,44,154);
-    }
-    input[type]{
-      border: 1px solid seashell;
-       padding: 15px;
-       padding-left: 60px; 
-       border-radius: 10px;
-       background: transparent;
-       
-    } 
-   button{
-      border: 1px solid seashell;
-      padding: 10px;
-      margin-left: 35%;
-      border-radius: 5px;
-      background: transparent;
-      color: rgb(117,124,130);;
-    }
-  </style>
-<body>
-    <div id="maindiv">
-        <form action="../html/jobsearch.html">
-        <h2>LOGIN</h2>    
-        <div id="subdiv1" class="subdiv"><input id="username" type="email" name="username" placeholder="Enter Username" required ></div>
-        <div id="subdiv2" class="subdiv"><input id="password" type="password" name="password" placeholder="Enter password"  required></div>
-        <div id="subdiv6" class="subdiv"><button type="button" onclick="localStore()">Login</button></div>
-        <div style="font-size: large;" id="singup"> <a href="../html/singup.html">singup</a></div>
-        </form>
-   </div>
-
-   <!-- java script -->
-   <script>
-//    console.log(localStorage.length/2);
-   function localStore(){
-             var username=document.getElementById("username").value;
-             var password=document.getElementById("password").value;
-            if(!username || !password){
-             return alert("Invaild Enter value's.....");
-           }else{
-             var checkusername=localStorage.getItem("username1");
-             var checkpassword=localStorage.getItem("password1");
-            //  console.log(checkusername);
-            //  console.log(checkpassword);
-             if(username == checkusername && password==checkpassword){
-               document.cookie="username="+username+";"+"expires="+new Date(2025, 2, 2).toUTCString();
-               document.cookie="password="+password+";"+"expires="+new Date(2025, 2, 2).toUTCString();
-               window.location.href="../html/jobsearch.html";
-               }  
-           }
+  *{
+    margin: 0px;
+    padding: 0px;
   }
-   </script>   
+   body{
+      height: 100vh;
+      background: linear-gradient(150deg,rgb(18,41,99),rgb(196, 25, 139),rgb(48, 154, 154)); 
+    }
+    h2{
+       text-align: center;
+        font-size: 2rem;
+        /* border: 2px solid black; */
+        border-radius: 20px;
+        padding: 5px;
+        display: inline-block;
+        margin:10px;
+        margin-left: 25%;
+        margin-right: 12%;
+        background: linear-gradient(150deg,rgb(38, 86, 86),rgb(18,41,99));
+        /* background:radial-gradient(130deg,rgb(37, 144, 74),rgb(171, 140, 25)) ; */
+    }
+    #maindiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 70px;
+    margin: 100px;
+    margin-left: 28%;
+    margin-top: 70px;
+    padding: 30px;
+    width: 40%;
+    background-image: url("../image/singup2.avif");
+    background-repeat: no-repeat;
+    background-size: 100% 100% ;
+  }
+  #maindiv>*{
+    padding: 10px;
+  }
+  .subdiv{
+    margin: 10px;
+  }
+  .subdiv :hover{
+    transform: scale(1.1);
+    background-color:rgb(0,14,51) ;
+    color: rgb(117,124,130);
+    border: 2px solid rgb(255,44,154);
+  }
+  input[type]{
+    border: 1px solid seashell;
+     padding: 15px;
+     padding-left: 60px; 
+     border-radius: 10px;
+     background: transparent;
+     color: rgb(117,124,130);
+     
+  } 
+ button{
+    border: 1px solid seashell;
+    padding: 10px;
+    margin-left: 35%;
+    border-radius: 5px;
+    background: transparent;
+    color: rgb(117,124,130);;
+  }
+  .singup{
+    border-radius: 20px;
+  padding:5px ;
+  display: inline-block;
+  font-size: 1.2rem;
+  color: rgb(109, 165, 214);
+  }
+</style>
+<body>
+  <div id="maindiv">
+      <form action="../html/jobsearch.html">
+      <h2>LOGIN</h2>    
+      <div id="subdiv1" class="subdiv"><input id="username" type="email" name="username" placeholder="Enter Username" required ></div>
+      <div id="subdiv2" class="subdiv"><input id="password" type="password" name="password" placeholder="Enter password"  required></div>
+      <div id="subdiv6" class="subdiv"><button type="button" onclick="localStore()">Login</button></div>
+      </form>
+      <div style="font-size: large;" class="singup"> <a class="singup" href="../html/singup.html" title="Direct to Singup">Create a account</a></div>
+ </div>
+
+ <!-- java script -->
+ <script>
+//    console.log(localStorage.length/2);
+ function localStore(){
+           var username=document.getElementById("username").value;
+           var password=document.getElementById("password").value;
+           var existingUser = localStorage.getItem("user");
+  if (existingUser) {
+      var users = JSON.parse(existingUser);
+      for (i = 0; i < users.length; i++) {
+          if (users[i].email === username && users[i].pwd === password) {
+              // Store username and password in a cookie
+              document.cookie="username="+username+";"+"expires="+new Date(2025, 2, 2).toUTCString();
+              document.cookie="password="+password+";"+"expires="+new Date(2025, 2, 2).toUTCString();
+              // // alert("Login successful!");
+              // var cookies=document.cookie.split(";");
+              // for(i=0;i<cookies.length;i++){
+              //   var value=cookies[i];
+              //   if((value== username)||(value== password)){
+              //     alert("Login successful!");
+              //     window.location.href="../html/jobsearch.html";
+              //   }
+              // }
+              window.location.href="../html/jobsearch.html";
+              return;
+          }
+      }
+  }
+
+  alert("Invalid username or password");
+}
+
+        //   if(!username || !password){
+        //    return alert("Invaild ");
+        //  }else{
+          //  var checkusername=localStorage.getItem("username1");
+          //  var checkpassword=localStorage.getItem("password1");
+          //  if(username == checkusername && password==checkpassword){
+          //    document.cookie="username="+username+";"+"expires="+new Date(2025, 2, 2).toUTCString();
+          //    document.cookie="password="+password+";"+"expires="+new Date(2025, 2, 2).toUTCString();
+          //    window.location.href="../html/jobsearch.html";
+          //    }  else {
+          //     return alert("Invaild Username or Password..");
+          //    }
+          // =============
+          // var checkuser=localStorage.getItem("user");
+          // if(checkuser){
+          //   var user=JSON.parse(checkuser)
+          //   for(i=0;i<user.length;i++){
+          //     if(user.email[i]===username && user.pwd[i]===password){
+          //       document.cookie="username="+username+";"+"expires="+new Date(2025, 2, 2).toUTCString();
+          //       document.cookie="password="+password+";"+"expires="+new Date(2025, 2, 2).toUTCString();
+          //       window.location.href="../html/jobsearch.html";
+          //     }
+          //   }
+          // }
+        //  }
+// }
+ </script>   
 </body>
 </html>
