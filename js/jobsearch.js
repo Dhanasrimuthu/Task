@@ -85,10 +85,10 @@ function pagefun(){
         page=1;
         if(search == undefined || searchCount>select){
             check = Math.ceil(count / select);
-            // console.log(check);
+            console.log(check);
             benginindex=select*(page-1);
             endindex=select*page-1;
-        //    console.log(page);
+           console.log(page);
         if (select == count) {
             toShowAll(select);
             for(i=0;i<btn.length;i++){
@@ -126,12 +126,14 @@ function toShowSelect(){
 });
     }
     pageno.textContent = page;
-    nextPageNo();
+    // nextPageNo();
 }
 function nextPageNo(){
     if(page < check){
         page++;
        }
+       console.log("netn"+page);
+       console.log(check);
        benginindex=select*(page-1);
        endindex=select*page-1;
 }
@@ -139,6 +141,8 @@ function previousPageNo(){
     if(page>1){
         page--;
        }
+       console.log("netp"+page);
+       console.log(check);
        benginindex=select*(page-1);
        endindex=select*page-1;
 }
@@ -168,8 +172,8 @@ function pageFunPrevious(){
     });
     }
         pageno.textContent = page;
-       page++;
-       console.log(page); 
+    //    page++;
+    //    console.log(page); 
 }
 
 function searchByOrder(){
@@ -187,4 +191,5 @@ function searchByOrder(){
         }
     }
 }
+
 
