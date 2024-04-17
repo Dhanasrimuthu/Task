@@ -105,15 +105,6 @@
               // Store username and password in a cookie
               document.cookie="username="+username+";"+"expires="+new Date(2025, 2, 2).toUTCString();
               document.cookie="password="+password+";"+"expires="+new Date(2025, 2, 2).toUTCString();
-              // // alert("Login successful!");
-              // var cookies=document.cookie.split(";");
-              // for(i=0;i<cookies.length;i++){
-              //   var value=cookies[i];
-              //   if((value== username)||(value== password)){
-              //     alert("Login successful!");
-              //     window.location.href="../html/jobsearch.html";
-              //   }
-              // }
               window.location.href="../html/jobsearch.html";
               return;
           }
@@ -122,33 +113,6 @@
 
   alert("Invalid username or password");
 }
-
-        //   if(!username || !password){
-        //    return alert("Invaild ");
-        //  }else{
-          //  var checkusername=localStorage.getItem("username1");
-          //  var checkpassword=localStorage.getItem("password1");
-          //  if(username == checkusername && password==checkpassword){
-          //    document.cookie="username="+username+";"+"expires="+new Date(2025, 2, 2).toUTCString();
-          //    document.cookie="password="+password+";"+"expires="+new Date(2025, 2, 2).toUTCString();
-          //    window.location.href="../html/jobsearch.html";
-          //    }  else {
-          //     return alert("Invaild Username or Password..");
-          //    }
-          // =============
-          // var checkuser=localStorage.getItem("user");
-          // if(checkuser){
-          //   var user=JSON.parse(checkuser)
-          //   for(i=0;i<user.length;i++){
-          //     if(user.email[i]===username && user.pwd[i]===password){
-          //       document.cookie="username="+username+";"+"expires="+new Date(2025, 2, 2).toUTCString();
-          //       document.cookie="password="+password+";"+"expires="+new Date(2025, 2, 2).toUTCString();
-          //       window.location.href="../html/jobsearch.html";
-          //     }
-          //   }
-          // }
-        //  }
-// }
  </script>   
 </body>
 </html>

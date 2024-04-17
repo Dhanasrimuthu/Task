@@ -13,14 +13,6 @@ body{
     top: 0px;
     background-color:rgb(237,243,248);
 }
-/* #logout{
-    padding:7px;
-    border: 2px solid rgb(150, 209, 229);
-    border-radius: 10px;
-    margin-left: 20%;
-    background: transparent;
-    font-weight: bold;
-} */
 #navcontainer{
     /* border: 1px solid black; */
     height: 15px;
@@ -109,9 +101,6 @@ img{
     border-radius: 5px;
     box-shadow: 1px 1px 5px 3px rgb(82, 77, 101);
 }
-/* span{
-    margin-left: 15px;
-} */
 #pageno{
     /* margin: 20px; */
     border: 1px solid rgb(134, 203, 226);
